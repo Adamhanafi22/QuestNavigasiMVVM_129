@@ -42,11 +42,12 @@ fun FormulirView(
     onClickButton: (MutableList<String>)->Unit
 ){
     var nama by remember { mutableStateOf("") }
+    var NIM by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("")  }
     var noHP by remember { mutableStateOf("")  }
     var alamat by remember { mutableStateOf("")  }
     var jenisK by remember { mutableStateOf("") }
-    var listData : MutableList<String> = mutableListOf(nama, jenisK, alamat,)
+    var listData : MutableList<String> = mutableListOf(nama, jenisK, alamat,NIM,email,noHP)
 
 
 
@@ -70,6 +71,17 @@ fun FormulirView(
             placeholder = {
                 Text("Masukan Nama Anda")
             }
+        )
+        Spacer(modifier = Modifier .padding(20.dp))
+
+        TextField(
+            modifier =  Modifier
+                .fillMaxWidth()
+                .padding(5.dp),
+            value = NIM,
+            onValueChange = {NIM = it},
+            label = {Text ("Nim")
+                    },
         )
         Row {
             pilihanJK.forEach { selectedJK ->
