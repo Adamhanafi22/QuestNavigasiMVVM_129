@@ -30,10 +30,7 @@ fun TampilMahasiswaView(
             Judul = "Alamat",
             Isinya = mhs.alamat
         )
-        TampilData(
-            Judul = "Email",
-            Isinya = mhs.alamat
-        )
+
 
     }
 }
