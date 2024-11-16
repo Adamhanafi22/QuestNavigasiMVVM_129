@@ -22,7 +22,7 @@ fun TampilMahasiswaView(
 ){
     Column(modifier = Modifier.fillMaxSize()){
         TampilData(
-            Judul = "Nama",
+            Judul = "nama",
             Isinya = mhs.nama
         )
         TampilData(
